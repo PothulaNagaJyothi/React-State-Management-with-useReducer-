@@ -45,8 +45,8 @@ const MultiStepForm = () => {
       if (!formData.name.trim()) currentErrors.name = 'Name is required';
       if (!/\S+@\S+\.\S+/.test(formData.email)) currentErrors.email = 'Invalid email format';
     } else if (step === 2) {
-      if (formData.username.length < 3) currentErrors.username = 'Username must be 3+ chars';
-      if (formData.password.length < 6) currentErrors.password = 'Password must be 6+ chars';
+      if (formData.username.length < 3) currentErrors.username = 'Username must be more than 3 characters';
+      if (formData.password.length < 6) currentErrors.password = 'Password must be more than 6 characters';
     }
 
     if (Object.keys(currentErrors).length > 0) {
